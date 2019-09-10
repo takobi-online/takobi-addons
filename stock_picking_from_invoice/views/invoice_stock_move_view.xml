@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="supplier_invoice_stock_move_view" model="ir.ui.view">
+            <field name="name">supplier_invoice_stock_move_view</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="action_stock_receive" string="Create stock move" class="oe_highlight"
+                            type="object"
+                            attrs="{'invisible':['|', '|', '|', ('invoice_picking_id', '!=', False), ('number', '=', False), ('has_products', '=', False), ('origin', '!=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='date_due']" position="after">
+                    <field name="picking_type_id"
+                           attrs="{'invisible':['|', '|', '|', ('invoice_picking_id', '!=', False), ('number', '=', False), ('has_products', '=', False), ('origin', '!=', False)]}"/>
+                    <field name="invoice_picking_id" readonly="1" attrs="{'invisible': [('invoice_picking_id', '=', False)]}"/>
+                    <field name="has_products" invisible="1"/>
+                </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>
