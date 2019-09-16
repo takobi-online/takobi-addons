@@ -15,7 +15,9 @@ class Invoice(models.Model):
             types = type_obj.search([('code', '=', 'incoming'), ('warehouse_id', '=', False)])
         return types[:1]
 
-    invoice_picking_id = fields.Many2one('stock.picking', string="Incoming shipment", help="Picking created directly from invoice")
+    invoice_picking_id = fields.Many2one(
+        'stock.picking', string="Incoming shipment", copy=False,
+        help="Picking created directly from invoice")
     picking_type_id = fields.Many2one('stock.picking.type', 'Picking Type', required=True,
                                       default=_default_picking_receive,
                                       help="This will determine picking type of incoming shipment")
@@ -47,6 +49,25 @@ class Invoice(models.Model):
                 picking = self.env['stock.picking'].create(pick)
                 inv.invoice_picking_id = picking.id
                 moves = inv.invoice_line_ids.filtered(lambda r: r.product_id.type in ['product', 'consu'])._create_stock_moves(picking)
+                moves = moves.filtered(lambda x: x.state not in ('done', 'cancel'))._action_confirm()
+                seq = 0
+                for move in sorted(moves, key=lambda move: move.date_expected):
+                    seq += 5
+                    move.sequence = seq
+                moves._action_assign()
+                picking.message_post_with_view('mail.message_origin_link',
+                    values={'self': picking, 'origin': inv},
+                    subtype_id=self.env.ref('mail.mt_note').id)
+
+    @api.multi
+    def action_view_picking(self):
+        self.ensure_one()
+        action = self.env.ref('stock.action_picking_tree_ready')
+        result = action.read()[0]
+        res = self.env.ref('stock.view_picking_form', False)
+        result['views'] = [(res and res.id or False, 'form')]
+        result['res_id'] = self.invoice_picking_id.id or False
+        return result
 
 
 class SupplierInvoiceLine(models.Model):

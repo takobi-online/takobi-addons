@@ -15,8 +15,18 @@
                 <xpath expr="//field[@name='date_due']" position="after">
                     <field name="picking_type_id"
                            attrs="{'invisible':['|', '|', '|', ('invoice_picking_id', '!=', False), ('number', '=', False), ('has_products', '=', False), ('origin', '!=', False)]}"/>
-                    <field name="invoice_picking_id" readonly="1" attrs="{'invisible': [('invoice_picking_id', '=', False)]}"/>
                     <field name="has_products" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='number']" position="before">
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object"
+                            name="action_view_picking"
+                            class="oe_stat_button"
+                            icon="fa-truck" attrs="{'invisible':[('invoice_picking_id','=',False)]}">
+                            <span>Incoming shipment</span>
+                            <field name="invoice_picking_id" readonly="1" invisible="1"/>
+                        </button>
+                    </div>
                 </xpath>
             </field>
         </record>
