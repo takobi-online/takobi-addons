@@ -62,7 +62,7 @@ class Invoice(models.Model):
     @api.multi
     def action_view_picking(self):
         self.ensure_one()
-        action = self.env.ref('stock.action_picking_tree_ready')
+        action = self.env.ref('stock.action_picking_tree_all')
         result = action.read()[0]
         res = self.env.ref('stock.view_picking_form', False)
         result['views'] = [(res and res.id or False, 'form')]
