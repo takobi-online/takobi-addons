@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_create_product_from_line
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-04 11:49+0000\n"
+"PO-Revision-Date: 2019-11-04 11:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_invoice_create_product_from_line
+#: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.wizard_create_product_from_invoice_line
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__code
+msgid "Code"
+msgstr "Codice"
+
+#. module: account_invoice_create_product_from_line
+#: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.wizard_create_product_from_invoice_line
+msgid "Create"
+msgstr "Creare"
+
+#. module: account_invoice_create_product_from_line
+#: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.invoice_supplier_form_create_product
+#: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.wizard_create_product_from_invoice_line
+msgid "Create product"
+msgstr "Creare prodotto"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.actions.act_window,name:account_invoice_create_product_from_line.action_wizard_create_product_from_invoice_line
+#: model:ir.model,name:account_invoice_create_product_from_line.model_wizard_create_product_from_invoice_line
+msgid "Create product from invoice line"
+msgstr "Creare prodotto da riga fattura"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__id
+msgid "ID"
+msgstr ""
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__name
+msgid "Name"
+msgstr "Nome"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__uom_id
+msgid "Unit of Measure"
+msgstr "Unità di misura"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__unit_price
+msgid "Unit price"
+msgstr "Prezzo unitario"
+

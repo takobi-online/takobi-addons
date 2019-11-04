@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_create_product_from_invoice_line" model="ir.ui.view">
+        <field name="name">wizard.create.product.from.invoice.line</field>
+        <field name="model">wizard.create.product.from.invoice.line</field>
+        <field name="arch" type="xml">
+            <form string="Create product">
+                <group>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="unit_price"/>
+                    <field name="uom_id"/>
+                </group>
+                <footer>
+                    <button string='Create' name="create_product" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_wizard_create_product_from_invoice_line" model="ir.actions.act_window">
+        <field name="name">Create product from invoice line</field>
+        <field name="res_model">wizard.create.product.from.invoice.line</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="wizard_create_product_from_invoice_line"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
