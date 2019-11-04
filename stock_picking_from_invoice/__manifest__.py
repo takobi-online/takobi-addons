@@ -6,8 +6,8 @@
     'version': '12.0.1.0.0',
     'summary': """Create Stock Picking From Supplier Invoice""",
     'description': """This Module Allows To Create Stocks Picking From Supplier Invoice""",
-    'author': "Cybrosys Techno Solutions",
-    'website': "https://www.cybrosys.com",
+    'author': "TAKOBI, Cybrosys Techno Solutions",
+    'website': "https://takobi.online",
     'category': 'Accounting',
     # Note: in case stock_picking_invoice_link was installed, a bridge module would probably be needed
     'depends': ['base', 'account', 'stock'],
