@@ -22,6 +22,8 @@ class CreateProduct(models.TransientModel):
             'uom_id': self.uom_id.id,
         })
         inv_line.product_id = product.id
+        if not inv_line.uom_id:
+            inv_line.uom_id = self.uom_id.id
 
     @api.model
     def default_get(self, fields):
