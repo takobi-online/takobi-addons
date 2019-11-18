@@ -4,22 +4,27 @@
         <field name="name">wizard.create.product.from.invoice.line</field>
         <field name="model">wizard.create.product.from.invoice.line</field>
         <field name="arch" type="xml">
-            <form string="Create product">
-                <group>
-                    <field name="name"/>
+            <form string="Create or select product">
+                <field name="mode" widget="radio"/>
+                <group attrs="{'invisible': [('mode', '=', 'search')]}">
+                    <field name="name" attrs="{'required': [('mode', '=', 'create')]}"/>
                     <field name="code"/>
                     <field name="unit_price"/>
-                    <field name="uom_id"/>
+                    <field name="uom_id" attrs="{'required': [('mode', '=', 'create')]}"/>
+                </group>
+                <group attrs="{'invisible': [('mode', '=', 'create')]}">
+                    <field name="product_id" attrs="{'required': [('mode', '=', 'search')]}"/>
                 </group>
                 <footer>
-                    <button string='Create' name="create_product" type="object" class="btn-primary"/>
+                    <button string='Create product' name="create_product" type="object" class="btn-primary" attrs="{'invisible': [('mode', '=', 'search')]}"/>
+                    <button string='Use product' name="use_product" type="object" class="btn-primary" attrs="{'invisible': [('mode', '=', 'create')]}"/>
                     <button string="Cancel" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>
         </field>
     </record>
     <record id="action_wizard_create_product_from_invoice_line" model="ir.actions.act_window">
-        <field name="name">Create product from invoice line</field>
+        <field name="name">Create or select product</field>
         <field name="res_model">wizard.create.product.from.invoice.line</field>
         <field name="view_type">form</field>
         <field name="view_mode">form</field>
