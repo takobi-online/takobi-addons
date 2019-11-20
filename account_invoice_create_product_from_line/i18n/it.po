@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-04 11:49+0000\n"
-"PO-Revision-Date: 2019-11-04 11:49+0000\n"
+"POT-Creation-Date: 2019-11-18 17:18+0000\n"
+"PO-Revision-Date: 2019-11-18 17:18+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -26,9 +26,10 @@ msgid "Code"
 msgstr "Codice"
 
 #. module: account_invoice_create_product_from_line
+#: model:ir.actions.act_window,name:account_invoice_create_product_from_line.action_wizard_create_product_from_invoice_line
 #: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.wizard_create_product_from_invoice_line
-msgid "Create"
-msgstr "Creare"
+msgid "Create or select product"
+msgstr "Creare o selezionare prodotto"
 
 #. module: account_invoice_create_product_from_line
 #: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.invoice_supplier_form_create_product
@@ -37,7 +38,6 @@ msgid "Create product"
 msgstr "Creare prodotto"
 
 #. module: account_invoice_create_product_from_line
-#: model:ir.actions.act_window,name:account_invoice_create_product_from_line.action_wizard_create_product_from_invoice_line
 #: model:ir.model,name:account_invoice_create_product_from_line.model_wizard_create_product_from_invoice_line
 msgid "Create product from invoice line"
 msgstr "Creare prodotto da riga fattura"
@@ -78,9 +78,29 @@ msgid "Last Updated on"
 msgstr "Ultimo aggiornamento il"
 
 #. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__mode
+msgid "Mode"
+msgstr "Modalità"
+
+#. module: account_invoice_create_product_from_line
 #: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__name
 msgid "Name"
 msgstr "Nome"
+
+#. module: account_invoice_create_product_from_line
+#: selection:wizard.create.product.from.invoice.line,mode:0
+msgid "New product"
+msgstr "Nuovo prodotto"
+
+#. module: account_invoice_create_product_from_line
+#: selection:wizard.create.product.from.invoice.line,mode:0
+msgid "Search existing product"
+msgstr "Ricercare prodotto esistente"
+
+#. module: account_invoice_create_product_from_line
+#: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__product_id
+msgid "Selected product"
+msgstr "Prodotto selezionato"
 
 #. module: account_invoice_create_product_from_line
 #: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__uom_id
@@ -91,4 +111,9 @@ msgstr "Unità di misura"
 #: model:ir.model.fields,field_description:account_invoice_create_product_from_line.field_wizard_create_product_from_invoice_line__unit_price
 msgid "Unit price"
 msgstr "Prezzo unitario"
+
+#. module: account_invoice_create_product_from_line
+#: model_terms:ir.ui.view,arch_db:account_invoice_create_product_from_line.wizard_create_product_from_invoice_line
+msgid "Use product"
+msgstr "Usare prodotto"
 

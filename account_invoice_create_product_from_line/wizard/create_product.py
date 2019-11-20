@@ -5,10 +5,15 @@ class CreateProduct(models.TransientModel):
     _name = 'wizard.create.product.from.invoice.line'
     _description = 'Create product from invoice line'
 
-    name = fields.Char("Name", required=True)
+    mode = fields.Selection([
+        ('search', "Search existing product"),
+        ('create', 'New product'),
+    ], "Mode", required=True, default="search")
+    name = fields.Char("Name")
     code = fields.Char("Code")
     unit_price = fields.Float("Unit price")
-    uom_id = fields.Many2one('uom.uom', 'Unit of Measure', required=True)
+    uom_id = fields.Many2one('uom.uom', 'Unit of Measure')
+    product_id = fields.Many2one("product.product", "Selected product")
 
     @api.multi
     def create_product(self):
@@ -25,6 +30,13 @@ class CreateProduct(models.TransientModel):
         inv_line.product_id = product.id
         if not inv_line.uom_id:
             inv_line.uom_id = self.uom_id.id
+
+    @api.multi
+    def use_product(self):
+        self.ensure_one()
+        line_id = self.env.context.get('active_id')
+        inv_line = self.env['account.invoice.line'].browse(line_id)
+        inv_line.product_id = self.product_id.id
 
     @api.model
     def default_get(self, fields):
