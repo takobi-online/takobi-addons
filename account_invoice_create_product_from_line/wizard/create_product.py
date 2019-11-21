@@ -37,6 +37,8 @@ class CreateProduct(models.TransientModel):
         line_id = self.env.context.get('active_id')
         inv_line = self.env['account.invoice.line'].browse(line_id)
         inv_line.product_id = self.product_id.id
+        if not inv_line.uom_id:
+            inv_line.uom_id = self.product_id.uom_po_id.id
 
     @api.model
     def default_get(self, fields):
