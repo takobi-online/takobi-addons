@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_order_form_additional_clause" model="ir.ui.view">
+        <field name="name">view_order_form_additional_clause</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="note" position="after">
+                <br/>
+                <field name="note_requires_acceptance" />
+                <label for="note_requires_acceptance" string="Terms &amp; conditions must be accepted" />
+                <br/>
+                <field name="note_accepted" />
+                <label for="note_accepted" string="Terms &amp; conditions accepted" />
+                <br/>
+                <field name="additional_clause" nolabel="1" attrs="{'required': [('additional_clause_requires_acceptance', '=', True)]}"
+                    placeholder="Additional clauses." class="oe_inline"/>
+                <br/>
+                <field name="additional_clause_requires_acceptance" />
+                <label for="additional_clause_requires_acceptance" string="Additional clauses must be accepted" />
+                <br/>
+                <field name="additional_clause_accepted" />
+                <label for="additional_clause_accepted" string="Additional clauses accepted" />
+            </field>
+            <field name="note" position="attributes">
+                <attribute name="attrs">{'required': [('note_requires_acceptance', '=', True)]}</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_order_template_additional_clause
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 15:15+0000\n"
+"PO-Revision-Date: 2019-12-06 15:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order__additional_clause_accepted
+msgid "Additional Clause Accepted"
+msgstr ""
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order__additional_clause_requires_acceptance
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order_template__additional_clause_requires_acceptance
+msgid "Additional Clause Requires Acceptance"
+msgstr "Le clausole aggiuntive richiedono accettazione"
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order__additional_clause
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order_template__additional_clause
+msgid "Additional clauses"
+msgstr "Clausole aggiuntive"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.view_order_form_additional_clause
+msgid "Additional clauses accepted"
+msgstr ""
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_template_view_form_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.view_order_form_additional_clause
+msgid "Additional clauses must be accepted"
+msgstr "Le clausole aggiuntive devono essere accettate"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_template_view_form_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.view_order_form_additional_clause
+msgid "Additional clauses."
+msgstr "Clausole aggiuntive."
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_portal_content_additional_clause
+msgid "Clauses"
+msgstr "Clausole"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_portal_content_additional_clause
+msgid "I accept the clauses"
+msgstr "Accetto le clausole"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_portal_content_additional_clause
+msgid "I accept the terms"
+msgstr "Accetto i termini"
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order__note_accepted
+msgid "Note Accepted"
+msgstr "Termini accettati"
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order__note_requires_acceptance
+#: model:ir.model.fields,field_description:sale_order_template_additional_clause.field_sale_order_template__note_requires_acceptance
+msgid "Note Requires Acceptance"
+msgstr "I termini richiedono accettazione"
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model,name:sale_order_template_additional_clause.model_sale_order_template
+msgid "Quotation Template"
+msgstr "Modello di preventivo"
+
+#. module: sale_order_template_additional_clause
+#: model:ir.model,name:sale_order_template_additional_clause.model_sale_order
+msgid "Sale Order"
+msgstr "Ordine di vendita"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_portal_content_additional_clause
+msgid "Signature"
+msgstr "Firma"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.view_order_form_additional_clause
+msgid "Terms & conditions accepted"
+msgstr "Termini e condizioni accettati"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_template_view_form_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.view_order_form_additional_clause
+msgid "Terms & conditions must be accepted"
+msgstr "Termini e condizioni devono essere accettati"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_portal_template_additional_clause
+msgid "You have to accept additional clauses"
+msgstr "È necessario accettare le clausole aggiuntive"
+
+#. module: sale_order_template_additional_clause
+#: model_terms:ir.ui.view,arch_db:sale_order_template_additional_clause.sale_order_portal_template_additional_clause
+msgid "You have to accept terms &amp; conditions"
+msgstr "È necessario accettare termini e condizioni"
+

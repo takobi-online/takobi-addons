@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend_inherit_sale" inherit_id="web.assets_frontend" name="Sale frontend assets">
+        <xpath expr="script[last()]" position="after">
+            <script type="text/javascript" src="/sale_order_template_additional_clause/static/src/js/sale_portal_additional_clause.js"/>
+        </xpath>
+    </template>
+</odoo>
