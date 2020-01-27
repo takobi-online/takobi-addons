@@ -14,6 +14,7 @@
     "installable": True,
     "depends": [
         "account",
+        "stock",
     ],
     "data": [
         "wizard/create_product_view.xml",

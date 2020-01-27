@@ -26,6 +26,7 @@ class CreateProduct(models.TransientModel):
             'standard_price': self.unit_price,
             'uom_id': self.uom_id.id,
             'uom_po_id': self.uom_id.id,
+            'type': 'product',
         })
         inv_line.product_id = product.id
         if not inv_line.uom_id:
