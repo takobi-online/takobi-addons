@@ -22,4 +22,7 @@ class SaleOrder(models.Model):
         return res
 
     def requires_acceptance(self):
-        return self.note_requires_acceptance or self.additional_clause_requires_acceptance
+        return (
+            (self.note_requires_acceptance and not self.note_accepted) or
+            (self.additional_clause_requires_acceptance and not self.additional_clause_accepted)
+        )
